@@ -47,7 +47,9 @@ export default function Home() {
       body: data,
       referrerPolicy: "unsafe-url",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        return res.json();
+      })
       .then((data) => {
         if (data.success) {
           toast("File Successfully Compressed", {
@@ -62,7 +64,7 @@ export default function Home() {
           });
           setIsCompressed(true);
         } else {
-          toast.error("An Error Occured", {
+          toast.error(data.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
