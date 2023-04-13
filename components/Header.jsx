@@ -8,7 +8,10 @@ export default function Header() {
       <div>
         <h3>File Compressor</h3>
       </div>
-      <a className={styles.icon} href="http://github.io">
+      <a
+        className={styles.icon}
+        href="https://github.com/rehans-Life/file-compressor"
+      >
         <BsGithub className={styles.github} />
       </a>
     </header>
