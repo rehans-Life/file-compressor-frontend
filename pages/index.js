@@ -45,7 +45,7 @@ export default function Home() {
     fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/compress`, {
       method: "POST",
       body: data,
-      referrerPolicy: "unsafe_url",
+      referrerPolicy: "unsafe-url",
     })
       .then((res) => res.json())
       .then((data) => {
@@ -92,7 +92,7 @@ export default function Home() {
     }
 
     fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/decompress/${file.name}`, {
-      referrerPolicy: "unsafe_url",
+      referrerPolicy: "unsafe-url",
     })
       .then((res) => res.json())
       .then((data) => {
@@ -189,7 +189,7 @@ export default function Home() {
             >
               <a
                 href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/download/file/${file?.name}/binary`}
-                referrerPolicy="unsafe_url"
+                referrerPolicy="unsafe-url"
                 download
                 style={!isCompressed ? { pointerEvents: "none" } : {}}
               >
@@ -218,7 +218,7 @@ export default function Home() {
             >
               <a
                 href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/download/file/${file?.name}/text`}
-                referrerPolicy="unsafe_url"
+                referrerPolicy="unsafe-url"
                 style={!isDecompressed ? { pointerEvents: "none" } : {}}
                 download
               >
