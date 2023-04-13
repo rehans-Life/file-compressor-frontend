@@ -15,7 +15,6 @@ export default function Home() {
 
   const handleFile = (e) => {
     let file = e.target.files[0];
-    console.log(file);
     if (file) {
       setIsCompressed(false);
       setIsDecompressed(false);
